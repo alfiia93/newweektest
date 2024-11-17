@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    /* Основной контейнер страницы */ .container { display: grid;
+    grid-template-areas: "header header header" "main main sidebar" "footer
+    footer footer"; grid-template-columns: 2fr 5fr 2fr; grid-gap: 20px;
+    padding:10px; } /* Базовые стили для различных областей */ .header {
+    grid-area:header; } .main { grid-area: main; } .sidebar { grid-area:
+    sidebar; } .footer { grid-area: footer; } /* Адаптивность для планшетов
+    (ширина от 600px до 1200px) */ @media (max-width: 1200px) { .container {
+    grid-template-areas: "header header" "main sidebar" "footer footer";
+    grid-template-columns: 2fr 1fr; } } /* Адаптивность для мобильных
+    устройств(ширина меньше 600px) */ @media (max-width: 600px) { .container {
+    grid-template-areas: "header" "main" "sidebar" "footer";
+    grid-template-columns: 1fr; grid-gap: 10px; } .main, .sidebar, .footer {
+    padding: 5px; } }
+  </body>
+</html>
